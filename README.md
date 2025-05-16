@@ -28,23 +28,23 @@ The CNN architecture used in this project:
 - **Input Layer**: 28x28 grayscale image
 - **Conv2D** (32 filters, 3x3) + ReLU
 - **MaxPooling2D** (2x2)
-- **Conv2D** (64 filters, 3x3) + ReLU
+- **Conv2D** (32 filters, 3x3) + ReLU
 - **MaxPooling2D** (2x2)
 - **Flatten**
 - **Dense** (64 units) + ReLU
+- **Dense** (32 units) + ReLU
 - **Dense** (10 units) + Softmax
 
 Compiled using:
-- **Loss Function**: `sparse_categorical_crossentropy`
+- **Loss Function**: `categorical_crossentropy`
 - **Optimizer**: `adam`
-- **Metrics**: `accuracy`
 
 ---
 
 ## ⚙️ Training Details
 
-- **Epochs**: 5
-- **Batch Size**: Default (from Keras)
+- **Epochs**: 20
+- **Batch Size**: 64
 - **Validation**: Performed on test dataset
 - **Training Accuracy**: High 90s
 - **Test Accuracy**: ~98%
